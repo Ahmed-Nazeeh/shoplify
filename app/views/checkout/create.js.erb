@@ -1,4 +1,4 @@
-var stripe = Stripe("<%= Rails.application.credentials[:stripe][:publishable_key] %>");
+var stripe = Stripe("<%= if Rails.env.production? then ENV['STRIPE_PUBLISHABLE_KEY'] else Rails.application.credentials[:stripe][:publishable_key] end %>");
 
   stripe.redirectToCheckout({
     sessionId: '<%= @session.id %>'
