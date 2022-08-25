@@ -56,3 +56,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "stripe", "~> 7.0"
+
+gem "devise", "~> 4.8"
