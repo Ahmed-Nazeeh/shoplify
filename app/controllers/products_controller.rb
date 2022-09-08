@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
   def remove_from_cart 
     id = params[:id].to_i 
     session[:cart].delete(id)
-    redirect_to product_path
+    redirect_to products_path
   end
 
   # GET /products or /products.json
