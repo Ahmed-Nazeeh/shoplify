@@ -3,7 +3,7 @@
 Status: <%= @session_with_expand.payment_status %>
 <br />
 Amount paid: 
-<%= @session_with_expand.amount_total %>
+<%= @session_with_expand.amount_total / 100 %>
 <%= @session_with_expand.currency %>
 <br />
 <h4>Products</h4>
