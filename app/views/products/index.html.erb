@@ -9,6 +9,7 @@
       <th>Price</th>
       <th>Stripe_Product_Id</th>
       <th>Stripe_Price_Id</th>
+      <th>Currency</th>
       <th>Shopping Cart</th>
       <th>Sales Count<th>
       <th colspan="3"></th>
@@ -19,7 +20,8 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product %></td>
-        <td><%= number_to_currency(product.price/100) %></td>
+        <td><%= product.price/100 %></td>
+        <td><%= product.currency %></td>
         <td><%= product.stripe_product_id %></td>
         <td><%= product.stripe_price_id %></td>
         <td>
